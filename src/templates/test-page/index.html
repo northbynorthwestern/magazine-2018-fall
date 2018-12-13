@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8">
+        {% block title %}
+        <title>test-page</title>
+        {% endblock %}
+
+        {% if env == 'production' %}
+        <link href="css/main-app.css" rel="stylesheet">
+        {% endif %}
+
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- jQuery -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+          crossorigin="anonymous">
+        </script>
+
+        <!--Typekit-->
+        <!-- DIN 2014 only -->
+        <link rel="stylesheet" href="https://use.typekit.net/dsx2uhv.css">
+        <!-- Jubilat include -->
+        <!-- <link rel="stylesheet" href="https://use.typekit.net/bvr3gvp.css"> -->
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+<body>
+  Hello
+
+{% block css %}
+{% if env == 'production' %}
+<link rel="stylesheet" href="../css/main-app.css">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block js %}
+<script src="../js/main-app.bundle.js"></script>
+{% endblock %}
+</body>
+</html>

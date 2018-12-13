@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script id='entry-template' type='text/x-handlebars-template'></script>
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=UA-100076603-1'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-100076603-1');
+</script>
+
+<meta property='og:site_name' content='North by Northwestern Fall 2017 Magazine' />
+<meta property='fb:app_id' content='829210430557671'/>
+<meta property='og:url' content='http://apps.northbynorthwestern.com/magazine/208/fall/{{section}}/{{slug}}/' />
+<meta property='og:type' content='article' />
+<meta property='og:title' content='{{title}}' />
+<!-- <meta property='og:description' content='{{subtitle}}' /> -->
+<meta property='og:image' content='http:'apps.northbynorthwestern.com/magazine/2017/fall/{{section}}/{{slug}}/cover_2000.jpg'' />
+<!-- <meta name='author' content='{{byline}}' /> -->
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:site' content='@nbn_tweets' />
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width+ initial-scale=1'>
+
+<title>{{title}} | North by Northwestern Fall 2018 Magazine</title>
+
+<link rel=stylesheet href='http://apps.northbynorthwestern.com/hungry/styles/22738433.main.css'>
+<!-- <link rel='stylesheet' href='../../universal.css'>
+<link rel='stylesheet' href='style.css'> -->
+
+{% if env == 'production' %}
+<link href="../css/main-app.css" rel="stylesheet">
+{% endif %}
+
+
+</head>
+<body>
+  {% block css %}
+  {% if env == 'production' %}
+  <link rel="stylesheet" href="../css/main-app.css">
+  {% endif %}
+  {% endblock %}
+
+<header class='masthead masthead-down'>
+  <div class='logo'>
+      <a href='//apps.northbynorthwestern.com/magazine/2018/fall/'><img class=nbn-logo src='http://nbn-housing.s3.amazonaws.com/static/img/nbn-logo.png' alt=''></a>
+  </div>
+</header>
+<main>
+  <a id='top'></a>
+  <article>
+    {{#if media_link }}
+      <div class="header-img">
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/{{media_link}}">
+      </div>
+      <p class='photo-byline byline'><a href='{{media_author_url}}' target='_blank'><b>{{media_byline}}</b></a> / <i>North by Northwestern</i></p>
+    {{/if}}
+
+      <header class='article-meta'>
+          <div class='headline'>
+              <h1 class=''>{{title}}</h1>
+              <h2 class='dek'>{{subtitle}}</h2>
+              <h3 class='byline'>By <a href='{{byline_url}}' target='_blank'>{{byline}}</a></h3>
+          </div>
+      </header>
+
+      <div class='blackboard'>
+      {{#each body}}
+        {{#ifEquals this.type "text"}}
+          <p>{{this.value}}</p>
+        {{/ifEquals}}
+
+        {{#ifEquals this.type "Section"}}
+        <p class="section-hed">{{this.value}}</p>
+        {{/ifEquals}}
+
+        {{#ifEquals this.type "image"}}
+        <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/{{this.value.0.Img-link}}">
+          <p class="img-caption">{{this.value.0.Caption}} {{this.value.0.caption}} / <span class="photo-credit">{{this.value.0.Photo-credit}} {{this.value.0.photo-credit}}</span></p>
+        {{/ifEquals}}
+      {{/each}}
+
+
+      </div>
+  </article>
+
+  <footer class='related-articles related-total-2' id='related-articles'>
+     <h1>Related articles</h1>
+      <div class='related-articles-row related-total-2'>
+          <a class='related-article-item item-1' href='{{related_left_link}}' target='_blank'>
+              <h1 class='head'>{{related_left_hed}}
+              </h1>
+              <p class='byline'>By {{related_left_byline}}</p>
+              <p class='origin'>{{related_left_date}}</p>
+          </a>
+          <a class='related-article-item item-2' href='{{related_right_link}}' target='_blank'>
+              <h1 class='head'>{{related_right_hed}}
+              </h1>
+              <p class='byline'>By {{related_right_byline}}</p>
+              <p class='origin'>{{related_right_date}}</p>
+          </a>
+      </div>
+  </footer>
+
+
+  </main>
+
+  <footer class='nbn-footer'>
+  <div class='footer-block'>
+  <div class='footer-item footer-left'>
+      <p>Produced by <b>Audrey DeBruine</b> for North by Northwestern</p>
+  </div>
+  <div class='footer-item footer-center footer-links'>
+      <a data-scroll data-options='{'updateURL': false}' href='#top'>Back to top</a>
+      <a href='../../index.html'> &laquo; Back to magazine </a>
+  </div>
+  <div class='footer-item footer-right'>
+    <p>&copy; North by Northwestern, December 6, 2018.</p> <p>All rights reserved.</p>
+  </div>
+  </div>
+  </footer>
+
+  {% block js %}
+  <script type="text/javascript" src="../js/main-app.bundle.js"></script>
+
+  {% endblock %}
+</body>
+</html>

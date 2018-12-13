@@ -1,0 +1,43 @@
+{
+  "id": "93391885164",
+  "publishPath": "",
+  "stagingUrl": "",
+  "url": "https://apps.northbynortwestern.com/2018/magazine/fall/",
+  "timestamp": "2018-04-10T08:13-0400",
+  "dateline": "04/10/18 08:13 PM EDT",
+  "header": {
+    "headline": "North by Northwestern | Fall 2018",
+    "subhed": "",
+    "byline": "North by Northwestern staff",
+    "byline_link": "https://www.northbynorthwestern.com/"
+  },
+  "share": {
+    "fbook": {
+      "card_title": "North by Northwestern Fall 2018",
+      "card_description": "",
+      "author": ""
+    },
+    "twitter": {
+      "card_title": "North by Northwestern Fall 2018",
+      "share_tweet": "",
+      "card_description": "",
+      "author": "@nbn_tweets"
+    },
+    "image": {
+      "url": "https://apps.northbynortwestern.com/interactives/2018/nbn-fall-mag/images/share.jpg",
+      "alt": "<Text>",
+      "type": "image/jpeg",
+      "width": "600",
+      "height": "300"
+    },
+    "keywords": "North By Northwestern, News, Evanston"
+  },
+  "telium": {
+    "free_paid_content": "",
+    "site_section": "",
+    "ad_unit_section": "",
+    "content_author": "",
+    "content_byline": "",
+    "page_name": "North by Northwestern | Fall 2018"
+  }
+}

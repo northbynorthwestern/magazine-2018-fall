@@ -1,0 +1,341 @@
+{% macro jpg(name, alt='Image') %}
+<img
+  src="images/{{ name }}-1800.jpg"
+  srcset="images/{{ name }}-400.jpg 400w, images/{{ name }}-800.jpg 800w, images/{{ name }}-1200.jpg 1200w, images/{{ name }}-1800.jpg 1800w"
+  alt="{{ alt }}"
+/>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8">
+        <title>{{META.telium.page_name}}</title>
+        {%include "meta/_icons.html"%}
+
+        {%include "meta/_social.html"%}
+        {% if env == 'production' %}
+        <link href="css/main-app.css" rel="stylesheet">
+        {% endif %}
+
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- jQuery -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+          crossorigin="anonymous">
+        </script>
+
+        <!--Typekit-->
+        <!-- DIN 2014 only -->
+        <link rel="stylesheet" href="https://use.typekit.net/dsx2uhv.css">
+        <!-- Jubilat include -->
+        <!-- <link rel="stylesheet" href="https://use.typekit.net/bvr3gvp.css"> -->
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+
+    <body>
+      {% include "partials/_nav.html" %}
+
+
+<!-- // FEATURES -->
+
+<div class="features-container">
+  <div class="story-topper">features</div>
+
+  <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[20].SLUG }}">
+  <div class="main-feature">
+    <div class="hed big">{{ DATA.Sheet1[20].HEADLINE }}</div>
+    <div class="deck">{{ DATA.Sheet1[20].DECK }} </div>
+
+    <div class="main-feature-images">
+      <div class="main-feature-img mobile-drop"><img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/math.png"></div>
+      <div class="main-feature-img"><img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/bball.png"></div>
+      <div class="main-feature-img mobile-drop"><img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/athletics.png"></div>
+    </div>
+    <div class="byline big">by <a href="{{ DATA.Sheet1[20].AUTHOR_LINK }}">{{ DATA.Sheet1[20].BYLINE }}</a></div>
+  </div>
+</a>
+
+
+  <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[19].SLUG }}">
+  <div class="other-features">
+    <div class="feature">
+      <!-- <div class="feature-img"></div> -->
+      <div class="hed medium">{{ DATA.Sheet1[19].HEADLINE }} </div>
+      <div class="deck">{{ DATA.Sheet1[19].DECK }} </div>
+      <div class="byline medium">by <a href="{{ DATA.Sheet1[19].AUTHOR_LINK }}">{{ DATA.Sheet1[19].BYLINE }}</a></div>
+  </div>
+</a>
+
+<a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[17].SLUG }}">
+<div class="feature">
+  <!-- <div class="feature-img"></div> -->
+  <div class="hed medium">{{ DATA.Sheet1[17].HEADLINE }} </div>
+  <div class="deck">{{ DATA.Sheet1[17].DECK }} </div>
+
+  <div class="byline medium">by <a href="{{ DATA.Sheet1[17].AUTHOR_LINK }}">{{ DATA.Sheet1[17].BYLINE }}</a></div>
+</div>
+</a>
+
+<a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[18].SLUG }}">
+  <div class="feature">
+    <!-- <div class="feature-img"></div> -->
+    <div class="hed medium">{{ DATA.Sheet1[18].HEADLINE }} </div>
+    <div class="deck">{{ DATA.Sheet1[18].DECK }} </div>
+
+    <div class="byline medium">by <a href="{{ DATA.Sheet1[18].AUTHOR_LINK }}">{{ DATA.Sheet1[18].BYLINE }}</a></div>
+</div>
+</a>
+</div>
+</div>
+
+
+ <!-- PREGAME  -->
+
+<div class="pregame-container">
+  <div class="story-topper">pregame</div>
+
+  <div class="pregame">
+    <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/racoon.png">
+
+    <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[2].SLUG }}">
+
+    <div class="hed small">{{ DATA.Sheet1[2].HEADLINE }} </div>    </a>
+    <div class="deck medium">{{ DATA.Sheet1[2].DECK }} </div>
+
+    <div class="byline small">by <a href="{{ DATA.Sheet1[2].AUTHOR_LINK }}">{{ DATA.Sheet1[2].BYLINE }}</a></div>
+
+  </div>
+
+
+    <div class="pregame">
+      <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/sandwich-man.gif">
+
+    <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[5].SLUG }}"><div class="hed small">{{ DATA.Sheet1[5].HEADLINE }} </div></a>
+    <div class="deck medium">{{ DATA.Sheet1[5].DECK }} </div>
+
+    <div class="byline medium">by <a href="{{ DATA.Sheet1[5].AUTHOR_LINK }}">{{ DATA.Sheet1[5].BYLINE }}</a></div>
+
+    </div>
+
+    <div class="pregame">
+      <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/life-advice.jpg">
+
+    <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[4].SLUG }}"><div class="hed small">{{ DATA.Sheet1[4].HEADLINE }} </div></a>
+    <div class="deck medium">{{ DATA.Sheet1[4].DECK }} </div>
+
+    <div class="byline medium">by <a href="{{ DATA.Sheet1[4].AUTHOR_LINK }}">{{ DATA.Sheet1[4].BYLINE }}</a></div>
+
+    </div>
+
+  <div class="pregame">
+
+  <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[3].SLUG }}"><div class="hed small">{{ DATA.Sheet1[3].HEADLINE }} </div></a>
+  <div class="deck medium">{{ DATA.Sheet1[3].DECK }} </div>
+
+  <div class="byline medium">by <a href="{{ DATA.Sheet1[3].AUTHOR_LINK }}">{{ DATA.Sheet1[3].BYLINE }}</a></div>
+
+  </div>
+
+
+
+
+  <div class="pregame">
+  <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[6].SLUG }}"><div class="hed small">{{ DATA.Sheet1[6].HEADLINE }} </div></a>
+  <div class="deck medium">{{ DATA.Sheet1[6].DECK }} </div>
+
+  <div class="byline medium">by <a href="{{ DATA.Sheet1[6].AUTHOR_LINK }}">{{ DATA.Sheet1[6].BYLINE }}</a></div>
+
+  </div>
+
+  <div class="pregame">
+  <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[1].SLUG }}"><div class="hed small">{{ DATA.Sheet1[1].HEADLINE }} </div></a>
+  <div class="deck medium">{{ DATA.Sheet1[1].DECK }} </div>
+
+  <div class="byline medium">by <a href="{{ DATA.Sheet1[1].AUTHOR_LINK }}">{{ DATA.Sheet1[1].BYLINE }}</a></div>
+
+  </div>
+</div>
+
+<!-- DANCEFLOOR  -->
+
+<div class="dancefloor-container">
+  <div class="story-topper">dance floor</div>
+
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/Go_U_Northwestern_I_dont_know_this_line_Breakdown.png">
+   <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[7].SLUG }}">
+
+   <div class="hed small">{{ DATA.Sheet1[7].HEADLINE }} </div>    </a>
+   <div class="deck medium">{{ DATA.Sheet1[7].DECK }} </div>
+
+   <div class="byline small">by <a href="{{ DATA.Sheet1[7].AUTHOR_LINK }}">{{ DATA.Sheet1[7].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/Res_Services.png">
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[8].SLUG }}"><div class="hed small">{{ DATA.Sheet1[8].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[8].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[8].AUTHOR_LINK }}">{{ DATA.Sheet1[8].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/Screen_Shot_2018-12-02_at_12.41.39_PM_1.png">
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[9].SLUG }}"><div class="hed small">{{ DATA.Sheet1[9].HEADLINE }} </div></a>
+<div class="deck medium">{{ DATA.Sheet1[9].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[9].AUTHOR_LINK }}">{{ DATA.Sheet1[9].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/Banner2.jpg">
+
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[10].SLUG }}"><div class="hed small">{{ DATA.Sheet1[10].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[10].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[10].AUTHOR_LINK }}">{{ DATA.Sheet1[10].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/_MG_1515.jpg">
+   <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[11].SLUG }}"><div class="hed small">{{ DATA.Sheet1[11].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[11].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[1].AUTHOR_LINK }}">{{ DATA.Sheet1[11].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/Banner3.jpg">
+
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[12].SLUG }}"><div class="hed small">{{ DATA.Sheet1[12].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[12].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[12].AUTHOR_LINK }}">{{ DATA.Sheet1[12].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/IMG_0104.jpeg">
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[13].SLUG }}"><div class="hed small">{{ DATA.Sheet1[13].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[13].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[13].AUTHOR_LINK }}">{{ DATA.Sheet1[13].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="dancefloor">
+   <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/05/Comic__pic1.jpg" style="width: 80% !important;">
+
+
+  <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[14].SLUG }}"><div class="hed small">{{ DATA.Sheet1[14].HEADLINE }} </div></a>
+  <div class="deck medium">{{ DATA.Sheet1[14].DECK }} </div>
+
+  <div class="byline medium">by <a href="{{ DATA.Sheet1[14].AUTHOR_LINK }}">{{ DATA.Sheet1[14].BYLINE }}</a></div>
+
+  </div>
+
+  <div class="dancefloor">
+    <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/12/03/This_is_fine_banner.png">
+   <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[15].SLUG }}"><div class="hed small">{{ DATA.Sheet1[15].HEADLINE }} </div></a>
+   <div class="deck medium">{{ DATA.Sheet1[15].DECK }} </div>
+
+   <div class="byline medium">by <a href="{{ DATA.Sheet1[15].AUTHOR_LINK }}">{{ DATA.Sheet1[15].BYLINE }}</a></div>
+
+   </div>
+
+   <div class="dancefloor">
+   <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[16].SLUG }}"><div class="hed small">{{ DATA.Sheet1[16].HEADLINE }} </div></a>
+   <div class="deck medium">{{ DATA.Sheet1[16].DECK }} </div>
+
+   <div class="byline medium">by <a href="{{ DATA.Sheet1[16].AUTHOR_LINK }}">{{ DATA.Sheet1[16].BYLINE }}</a></div>
+
+   </div>
+</div>
+
+
+
+<!-- HANGOVER  -->
+
+<div class="hangover-container">
+  <div class="story-topper">hangover</div>
+
+
+ <div class="hangover">
+   <div class="hangover-break"></div>
+
+   <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[21].SLUG }}">
+
+   <div class="hed small">{{ DATA.Sheet1[21].HEADLINE }} </div>    </a>
+   <div class="deck medium">{{ DATA.Sheet1[21].DECK }} </div>
+
+   <div class="byline small">by <a href="{{ DATA.Sheet1[21].AUTHOR_LINK }}">{{ DATA.Sheet1[21].BYLINE }}</a></div>
+
+ </div>
+
+
+ <div class="hangover">
+   <div class="hangover-break"></div>
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[22].SLUG }}"><div class="hed small">{{ DATA.Sheet1[22].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[22].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[22].AUTHOR_LINK }}">{{ DATA.Sheet1[22].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="hangover">
+   <div class="hangover-break"></div>
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[23].SLUG }}"><div class="hed small">{{ DATA.Sheet1[23].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[23].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[23].AUTHOR_LINK }}">{{ DATA.Sheet1[23].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="hangover">
+   <div class="hangover-break"></div>
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[24].SLUG }}"><div class="hed small">{{ DATA.Sheet1[24].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[24].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[24].AUTHOR_LINK }}">{{ DATA.Sheet1[24].BYLINE }}</a></div>
+
+ </div>
+
+ <div class="hangover">
+   <div class="hangover-break"></div>
+
+ <a href="http://apps.northbynorthwestern.com/magazine/2018/fall/{{ DATA.Sheet1[25].SLUG }}"><div class="hed small">{{ DATA.Sheet1[25].HEADLINE }} </div></a>
+ <div class="deck medium">{{ DATA.Sheet1[25].DECK }} </div>
+
+ <div class="byline medium">by <a href="{{ DATA.Sheet1[25].AUTHOR_LINK }}">{{ DATA.Sheet1[25].BYLINE }}</a></div>
+
+ </div>
+
+</div>
+
+      {% include "partials/_footer.html" %}
+      <script type="text/javascript">window.tweetText = "{{META.share.twitter.share_tweet}}";</script>
+    </body>
+</html>
+
+
+{% block js %}
+<script type="text/javascript" src="js/main-app.bundle.js"></script>
+
+{% endblock %}

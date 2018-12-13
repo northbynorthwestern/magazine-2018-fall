@@ -1,0 +1,7 @@
+{
+  "generator-nbn-interactives": {
+    "promptValues": {
+      "lintProfile": "es6-recommended"
+    }
+  }
+}

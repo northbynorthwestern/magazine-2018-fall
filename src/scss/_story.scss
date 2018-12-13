@@ -1,0 +1,544 @@
+.headline {
+
+  h1 {
+  font-family: $open-sans;
+
+  @media screen and (max-width: 900px) {
+    font-size: 35px !important;
+  }
+}
+
+  h2 {
+    @media screen and (max-width: 900px) {
+      font-size: 25px !important;
+    }
+  }
+}
+
+article {
+p.photo-byline {
+  font-size: 12px !important;
+  //float: right;
+  padding-right: 5px;
+  display: block;
+}
+}
+
+/* the blackboard, with all the content text */
+
+.blackboard{
+    width: 85%;
+    max-width: 750px;
+    margin: 0 auto;
+    color: black;
+}
+
+.blackboard p.img-caption {
+  padding-top: 5px;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  color: $dark-gray;
+}
+
+.blackboard p {
+    font-size: 0.95em;
+    line-height: 2.2em;
+    //margin-bottom: 1em;
+    font-family: $open-sans;
+    font-weight: 400;
+    margin: 0 0 1em 0 !important;
+    max-width: 800px !important;
+
+    &.section-hed {
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+}
+
+.blackboard p a:hover {
+    color: #8376B6;
+}
+
+
+
+.blackboard h3{
+    margin-top: 20px;
+    padding: 20px 0 15px;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    color: black;
+}
+
+.blackboard hr{
+    margin: 40px auto;
+}
+/* dropcap */
+
+.blackboard h3+p:not(.nodrop):first-letter{
+    float: left;
+    color: #D1D2D4;
+    font-size: 4em;
+    line-height: 50px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: Georgia;
+}
+
+@media print{
+    .blackboard h3+p:first-letter, .blackboard p.lead:first-letter{
+        font-size: 1em;
+        padding: 0;
+        color: inherit;
+        float: none;
+    }
+
+}
+
+/* LEAD */
+
+.blackboard p.lead{
+    font-size: 1.2em;
+    width: 120%;
+    margin-left: -10%;
+    line-height: 1.8em;
+}
+
+@media screen and (max-width: 1200px){
+    .blackboard p.lead{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* PULLQUOTE */
+
+.blackboard .pullquote {
+    margin: 10px 30px;
+    text-align: center;
+    border-top: 3px solid #D1D2D4;
+    border-bottom: 3px solid #D1D2D4;
+}
+
+.blackboard .pullquote *{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.7em;
+    line-height: 1.6em;
+    margin-bottom: 0;
+}
+
+.blackboard #attrib {
+    font-weight: lighter;
+    font-size: 1.3em;
+}
+
+.blackboard .pullquote-right{
+    float: right;
+    padding-left: 20px;
+    margin-left: 40px;
+    text-align: left;
+    border-left: 3px solid #D1D2D4;
+    margin-right: -100px;
+    width: 50%;
+}
+
+mark {
+    background-color: rgba(209, 210, 212, .4);
+}
+
+.blackboard .pullquote-left{
+    float: left;
+    margin-right: 40px;
+    padding-right: 20px;
+    text-align: right;
+    border-right: 3px solid #D1D2D4;
+    margin-left: -100px;
+    width: 50%;
+}
+
+.pullquote-left p, .pullquote-right p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.7em;
+    line-height: 1.6em;
+    margin-bottom: 0;
+}
+
+/* when pullquotes become too much */
+@media screen and (max-width: 1200px){
+    .blackboard .pullquote{
+        width: 100%;
+        margin: 20px 10px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .blackboard .pullquote *{
+        font-size: 1.3em;
+    }
+
+    .blackboard .pullquote-right, .blackboard .pullquote-left {
+        float: none;
+        border: none;
+        border-top: 3px solid #D1D2D4;
+        border-bottom: 3px solid #D1D2D4;
+        margin: 40px 0 40px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .pullquote-right, .pullquote-left p {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1.3em;
+    }
+
+    .blackboard #attrib {
+        font-size: 1em;
+    }
+}
+
+@media print {
+    .blackboard .pullquote{
+        display: none;
+    }
+}
+
+
+/* sidebars */
+.blackboard .sidebar{
+    width: 300px;
+    margin: 10px 15px;
+    background-color: #D1D2D4;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.blackboard .sidebar *{
+    margin-bottom: 0;
+}
+
+.blackboard .sidebar-right{
+    float: right;
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-left: 3px solid #D1D2D4;
+    border-right: 3px solid #D1D2D4;
+    margin-right: -100px;
+}
+
+.blackboard .sidebar-left{
+    float: left;
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-left: 3px solid #D1D2D4;
+    border-right: 3px solid #D1D2D4;
+    margin-left: -100px;
+}
+
+/* when sidebars become too much */
+// (@media screen and (max-width: 1200px)) or @media print {
+//     .blackboard .sidebar{
+//         width: 100%;
+//         margin: 10px auto;
+//         text-align: center;
+//         padding: 20px 0;
+//     }
+//     .blackboard .sidebar h3{
+//         margin-top: 0;
+//     }
+//     .blackboard .sidebar-right, .blackboard .sidebar-left{
+//         float: none;
+//         border: none;
+//         border-top: 3px solid #D1D2D4;
+//         border-bottom: 3px solid #D1D2D4;
+//     }
+// }
+
+/* Embeds and other things that are full flow */
+
+.blackboard .full-flow{
+    text-align: center;
+    border-top: 8px #D1D2D4 solid;
+    border-bottom: 8px #D1D2D4 solid;
+    padding: 30px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.blackboard .full-flow .figure-item{
+    width: 120%;
+    min-height: 700px;
+    margin-left: -10%;
+}
+
+.blackboard .full-flow img.figure-item{
+    max-width: 120%;
+    position: relative;
+    left: -10%;
+}
+
+
+.blackboard .full-flow.embed figcaption{
+    margin-right: -10%;
+}
+
+/* when things start screwing up b/c too big */
+
+@media screen and (max-width: 1200px){
+    .blackboard .full-flow .figure-item{
+        width: 100%;
+        min-height: 60vh;
+        height: auto;
+        margin: 0 auto;
+    }
+    .blackboard .full-flow img.figure-item{
+        left: 0;
+        min-height: 0;
+    }
+    .blackboard .full-flow.embed figcaption{
+        margin-right: 0;
+    }
+}
+
+@media print{
+    .blackboard figure{
+        display: none;
+    }
+}
+
+/* images and other things that aren't full-flow, but pulled */
+
+.blackboard .image{
+    width: 500px;
+    height: 100%;
+    margin: 10px 30px;
+}
+
+.blackboard .image-right{
+    float: right;
+    margin-right: -100px;
+    border-left: #D1D2D4 solid 3px;
+    padding-left: 20px;
+    width: 500px;
+    margin-left: 20px;
+}
+
+.blackboard .image-left{
+    float: left;
+    margin-left: -100px;
+    border-right: #D1D2D4 solid 3px;
+    padding-right: 20px;
+    width: 600px;
+    margin-right: 20px;
+}
+
+
+
+/* LISTS */
+
+.blackboard ul, .blackboard ol{
+    font-size: 1em;
+    font-family: "Open Sans", "PT Sans", sans-serif;
+    line-height: 1.6em;
+}
+
+
+/* notes and clarifications */
+
+article footer.footnote{
+    font-style: italic;
+    margin: 0 auto;
+    background: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Article Meta */
+
+article header .headline h1{
+    font-weight: 700;
+    font-size: 4em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+article header .headline h2 {
+    font-weight: 100;
+    font-size: 1.8em;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+article header .headline h3{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+article header img {
+  width: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+}
+
+.header-img {
+  text-align: center;
+}
+article header.article-meta{
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  article header.article-meta{
+    padding-top: 0;
+  }
+}
+
+article header.article-meta a{
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+article h2.author
+article section{
+    border-top: 1px solid black;
+    padding-top: 5px;
+}
+
+article section h3{
+    padding-bottom: 5px;
+}
+
+
+/* related articles, if any */
+
+
+footer.related-articles{
+    clear: both;
+    border-top: 3px solid #D1D2D4;
+    background: none;
+    color: rgb(34, 34, 34);
+    width: 90%;
+    max-width: 900px;
+    height: fit-content;
+    margin: 20px auto;
+}
+
+.related-articles-row{
+    display: flex;
+    flex-flow: row wrap;
+    background: none;
+    color: rgb(69, 69, 69);
+    height: 100%;
+    width: 100%;
+}
+
+.related-article-item{
+    color: rgb(68, 68, 68);
+    text-align: center;
+    margin: 5px;
+    width: 40%;
+    padding: 20px;
+    flex: 1;
+}
+
+.related-article-item:hover{
+    text-decoration: underline;
+}
+
+.related-article-item+.related-article-item{
+    border-left: 1px solid rgb(74, 74, 74);
+}
+
+.related-article-item h1, .related-article-item h2, .related-article-item p{
+    font-family: "Open Sans", sans-serif;
+    margin: 5px auto;
+}
+.related-article-item h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.related-article-item h2.deck{
+    font-weight: 200;
+    font-size: 1em;
+    width: 80%;
+    margin: 10px auto;
+}
+.related-article-item p.byline{
+    font-weight: 400;
+}
+.related-article-item .origin{
+    font-size: 0.85em;
+    padding-top: 5px;
+}
+
+.related-total-2 .related-article-item{
+    width: 50%;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 750px){
+    .related-articles{
+        text-align: center;
+    }
+    .related-articles-row{
+        flex-flow: wrap column;
+        align-items: center;
+    }
+    .related-total-2 .related-article-item{
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        height: 100%;
+    }
+    .related-article-item h1{
+        font-size: 1.5em;
+    }
+    .related-article-item+.related-article-item{
+        border-left: none;
+        border-top: 1px solid rgb(74, 74, 74);
+    }
+}
+
+
+a{
+  color: black;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $gray;
+    text-decoration: none;
+
+  }
+}
+
+a,
+a::before,
+a::after,
+button {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.footer-item p {
+  font-family: $open-sans;
+  line-height: 1em;
+}
